@@ -205,9 +205,9 @@ td span {
     background: #ccc;
 }
 
-/* =========================
+/*
    Cart Total Enhancements
-========================= */
+*/
 
 /* Total Row */
 .total_amount {
@@ -272,9 +272,9 @@ button:hover {
     opacity: 0.95;
 }
 
-/* =========================
+/*
    Responsive (Media Queries)
-========================= */
+*/
 
 @media (max-width: 1024px) {
     .cart_container {

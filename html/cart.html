@@ -33,9 +33,9 @@
                     </td>
                     <td id="product1_price">$10.00</td>
                     <td>
-                        <button class="increase_quantity">+</button>
+                        <button class="increase_quantity" onclick="updateQuantity('product1_quantity', 1)">+</button>
                         <span id="product1_quantity">1</span>
-                        <button class="decrease_quantity">-</button>
+                        <button class="decrease_quantity" onclick="updateQuantity('product1_quantity', -1)">-</button>
                     </td>
                     <td id="product1_total">$10.00</td>
                 </tr>
@@ -48,9 +48,9 @@
                         </td>
                         <td id="product2_price">$20.00</td>
                         <td>
-                            <button class="increase_quantity">+</button>
+                            <button class="increase_quantity" onclick="updateQuantity('product2_quantity', 1)">+</button>
                             <span id="product2_quantity">1</span>
-                            <button class="decrease_quantity">-</button>
+                            <button class="decrease_quantity" onclick="updateQuantity('product2_quantity', -1)">-</button>
                         </td>
                         <td id="product2_total">$20.00</td>
                     </tr>
@@ -68,7 +68,7 @@
 
       <div class="cart_total">
         <h2>Cart Total</h2>
-        <p>Subtotal: $30.00</p>
+        <p>Subtotal: <span id="subtotal_span"> $30.00</span></p>
         <p class="shipping_detail">
             there are no shipping methods available. please double check your address, or contact us if you need any help.
         </p>
@@ -82,7 +82,7 @@
                 </select>
                  <input type="text" placeholder="State / Country">
                  <input type="text" placeholder="Postcode / Zip">
-         <button class="calculate_btn">Update total</button>
+         <button class="calculate_btn" onclick="calculateCartTotal()">Update total</button>
 
         </div>
         <span class="total_amount">Total: $30.00</span>
@@ -92,6 +92,6 @@
 
     </div>
    
-    
+   <script src="../js/cart.js"></script> 
 </body>
 </html>
