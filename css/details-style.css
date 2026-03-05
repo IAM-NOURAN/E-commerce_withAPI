@@ -278,14 +278,17 @@
 
 }
 
-#op1 img , #op2 img, #op3 img{
-    width:68px;
+.active{
+    img{
+    border:2px #c2c0c0 solid;
+    }
+}
+.options{
+    img{
+    width:68px;}
 
 }
-#op1 img{
-        border:2px #c2c0c0 solid;
-}
-#op1, #op2, #op3{
+.options{
     padding: 10px;
 }
 #op1 img:hover , #op2 img:hover, #op3 img:hover{
@@ -293,8 +296,3 @@
     border:2px #c2c0c0 solid;
 }
 
-.active{
-    img{
-    border:2px #c2c0c0 solid;
-    }
-}
