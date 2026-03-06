@@ -262,6 +262,10 @@ p{
   height: auto;
   object-fit: contain;
   display: block;
+  /*  */
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
 }
 .quick-btn {
   position: absolute;
