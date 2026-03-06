@@ -2,9 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-body {
-  font-family: Arial, sans-serif;
+h1,h2,h3{
+  font-weight:600;
+}
+p{
+  font-weight:400;
 }
 /* ===== Top Bar ===== */
 .topBar {
@@ -71,23 +75,26 @@ body {
   border-radius: 50%;              
 }
 .hero{
-    position: relative;
-    height: 100%;
-    overflow: hidden;
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
 }
-.slide {
+.slide{
   position: absolute;
   width: 100%;
   height: 100%;
-  display: none;
-  background-size: cover;
-  background-position: center;
-  padding-left: 100px;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 100px;
+
+  background-size: cover;
+  background-position: center;
 }
-.slide.active {
-  display: flex;
+.slide.active{
+  opacity: 1;
 }
 .slide:nth-child(1) { 
     background-image: url('../images/home/slide-01.jpg');
@@ -113,6 +120,17 @@ body {
   color: white;
   cursor: pointer;
   border-radius: 30px;
+}
+.slide.active h4{
+  transition-delay: 0.2s;
+}
+
+.slide.active h1{
+  transition-delay: 0.4s;
+}
+
+.slide.active button{
+  transition-delay: 0.6s;
 }
 .prev, .next {
   position: absolute;
