@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css\details-style.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+    <div class="body">
+        <img src="../images/icons/icon-close.png" alt="" id="close">
+    <div class="overlay-div">
+        <div id="photos">
+
+            <div>
+                <div id="op1" class="options active">
+                        <img src="../images/product-detail-01.jpg" alt="">
+                    </div>
+
+                    <div id="op2" class="options">
+                        <img src="../images/product-detail-02.jpg" alt="">
+                    </div>
+
+                    <div id="op3" class="options">
+                        <img src="../images/product-detail-03.jpg" alt="">
+                    </div>
+            </div>
+
+                <div id="bigscreen">
+                    <img src="../images/product-detail-01.jpg" alt="" id="screen">
+                    <button id="next" ><i class="fa fa-chevron-right" aria-hidden="true" style="color: white;"></i></button>
+                    <button id="prev"  ><i class="fa fa-chevron-left" aria-hidden="true" style="color: white;"></i></button>
+                    <a id="zoom"><i class="fa fa-expand" aria-hidden="true"></i></a>
+                </div>
+
+
+                
+        </div>
+
+        <div id="my-data">
+
+                <div id="titles">
+                    <h4>Lightweight Jacket</h4>
+                    <span>$58.79</span>
+                    <p>Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.</p>
+                </div>
+
+                
+                    <div id="details">
+
+                    <table>
+                        
+                        <tr>
+                            <td><label for="Size">Size</label></td>
+                            <td>
+                            <select name="Size" id="Size">
+                            <option value="default">Choose an option</option>
+                            <option value="s"> Size S</option>
+                            <option value="m"> Size M</option>
+                            <option value="l"> Size L</option>
+                            <option value="xl"> Size XL</option>
+                        </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="Color">Color</label></td>
+                            <td>
+                            <select name="Color" id="Color">
+                            <option value="default">Choose an option</option>
+                            <option value="w">white</option>
+                            <option value="bl">black</option>
+                            <option value="g">grey</option>
+                            <option value="br">brown</option>
+                        </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="quantity-btn">
+                                    <button id="btn-inc">+</button>
+                                    <input type="number" value="1" min="1" id="numinput">
+                                    <button id="btn-dec">-</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                        <button id="add">ADD TO CART</button>
+                            </td>
+                        </tr>
+
+                        <!-- <tr>
+                            <td></td>
+                            <td id="icons">
+							<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
+								<i class="fa fa-facebook"></i>
+							</a>
+
+							<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
+								<i class="fa fa-twitter"></i>
+							</a>
+
+							<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
+								<i class="fa fa-google-plus"></i>
+							</a>
+                            </td>
+                        </tr> -->
+                    </table>
+
+                        
+
+                </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="../js/details.js"></script>
+</body>
+</html>
