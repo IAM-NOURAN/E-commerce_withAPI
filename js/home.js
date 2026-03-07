@@ -58,6 +58,8 @@ xhr.onload = function(){
         
         for(let i = 0; i < limit; i++){
             let p = products[i];
+            let id = p.id;
+            let productUrl = `../html/cart.html?id=${encodeURIComponent(id)}`;
             let product = document.createElement("div");
             product.classList.add("product");
             product.innerHTML = `
@@ -72,7 +74,7 @@ xhr.onload = function(){
                     </div>
                 </div>
                 <div class="cart-icon">
-                    <img src="..\\images\\home\\shopping-cart.png" alt="">
+                    <a href="${productUrl}"><img src="..\\images\\home\\shopping-cart.png" alt="Add to Cart"></a>
                 </div>
             `;
             container.appendChild(product);
@@ -146,6 +148,16 @@ close.addEventListener('click',()=>{
 // zoom.addEventListener('click',()=>{
 //     copy.classList.add("zoomMode");
 // })
+let addToCartBtn = document.querySelector('.add-to-cart-btn');
+addToCartBtn.addEventListener('click', () => {
+    let product = {
+        id: productId,
+        name: document.querySelector('.product-info h4').textContent,
+        price: document.querySelector('.product-info p').textContent
+    };
+    // Here you would typically add the product to the cart in localStorage or send it to the server
+    alert('Product added to cart!');
+});
 
 
 
