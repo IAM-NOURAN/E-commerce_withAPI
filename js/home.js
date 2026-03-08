@@ -1,3 +1,5 @@
+
+////////////////////// slide show ///////////////////////
 let slides = document.querySelectorAll(".slide");
 let nextBtn = document.querySelector(".next");
 let prevBtn = document.querySelector(".prev");
@@ -46,7 +48,8 @@ setInterval(function(){
 
 },4000);
 
-// fake products API
+/////////////////////// fake products API///////////////////////
+
 let container = document.getElementById("products_container");
 
 let xhr = new XMLHttpRequest();
@@ -88,6 +91,9 @@ xhr.onload = function(){
 };
 xhr.open("GET","https://69ab3a51e051e9456fa39c75.mockapi.io/api/clothes/products",true);
 xhr.send();
+
+
+////////////////////details overlay//////////////////////////////
 
 // Use event delegation for quick-btn
 let mywind = document.getElementById('overlay');
@@ -148,15 +154,11 @@ close.addEventListener('click',()=>{
 // zoom.addEventListener('click',()=>{
 //     copy.classList.add("zoomMode");
 // })
+
 let addToCartBtn = document.querySelector('.add-to-cart-btn');
 addToCartBtn.addEventListener('click', () => {
-    let product = {
-        id: productId,
-        name: document.querySelector('.product-info h4').textContent,
-        price: document.querySelector('.product-info p').textContent
-    };
-    // Here you would typically add the product to the cart in localStorage or send it to the server
-    alert('Product added to cart!');
+    pass
+
 });
 
 

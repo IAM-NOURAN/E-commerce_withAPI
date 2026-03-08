@@ -1,5 +1,7 @@
 
 
+/****** past code for cart page, now replaced with a more dynamic version *******/
+
 /*function updateQuantity(quantityId, change) {
     const quantityElement = document.getElementById(quantityId);
     let currentQuantity = parseInt(quantityElement.textContent);
@@ -13,6 +15,10 @@
     const price = parseFloat(priceElement.textContent.replace('$', ''));
     totalElement.textContent = `$${(price * currentQuantity).toFixed(2)}`;
 }*/
+
+/////////////////////////////////////////////////////////////////////////
+
+/**** past code for loading a single product into the cart ******/
 
 /*
 let urlParams = new URLSearchParams(window.location.search);
@@ -60,7 +66,22 @@ if (productId) {
     console.log("No product ID found in the URL. Cart is empty.");
 }*/
 
-//////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+////////////to update the quantity of a product in the cart/////////////
+
+updateQuantity = function(productId, change) {
+    let product = cart.find(p => p.id == productId);
+    if (!product) return; // If we can't find the product, do nothing
+
+    product.quantity += change;
+    if (product.quantity <= 0) {
+        cart = cart.filter(p => p.id != productId);
+    }
+
+    localStorage.setItem('myShoppingItems', JSON.stringify(cart));
+    renderCart();
+}
 
 function calculateCartTotal() {
     const totalElements = document.querySelectorAll('[id^="product"][id$="_total"]');
@@ -87,12 +108,12 @@ quantityButtons.forEach(button => {
 // Initial total calculation
 calculateCartTotal();
 
-
-//update cart total when quantity changes
+/////////////////////////////////////////////////////////////////////////////
+           //////////******* api from home *******/////////////
 
 // 1. Get the existing cart from localStorage, or create an empty array if it's empty
-let cart = JSON.parse(localStorage.getItem('myShoppingItems')) || [];
 
+let cart = JSON.parse(localStorage.getItem('myShoppingItems')) || [];
 let urlParams = new URLSearchParams(window.location.search);
 let productId = urlParams.get('id');
 
@@ -121,6 +142,7 @@ function renderCart() {
             </tr>
         `;
         tbody.innerHTML += row;
+         
     });
 }
 
@@ -158,17 +180,3 @@ if (productId) {
     renderCart();
 }
 
-//  to update the quantity of a product in the cart
-
-updateQuantity = function(productId, change) {
-    let product = cart.find(p => p.id == productId);
-    if (!product) return; // If we can't find the product, do nothing
-
-    product.quantity += change;
-    if (product.quantity <= 0) {
-        cart = cart.filter(p => p.id != productId);
-    }
-
-    localStorage.setItem('myShoppingItems', JSON.stringify(cart));
-    renderCart();
-}
