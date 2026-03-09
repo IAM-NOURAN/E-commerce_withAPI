@@ -1,71 +1,5 @@
 
 
-/****** past code for cart page, now replaced with a more dynamic version *******/
-
-/*function updateQuantity(quantityId, change) {
-    const quantityElement = document.getElementById(quantityId);
-    let currentQuantity = parseInt(quantityElement.textContent);
-    currentQuantity += change;
-    if (currentQuantity < 1) currentQuantity = 1;
-    quantityElement.textContent = currentQuantity;
-
-    // Update total price for the product
-    const priceElement = document.getElementById(quantityId.replace('quantity', 'price'));
-    const totalElement = document.getElementById(quantityId.replace('quantity', 'total'));
-    const price = parseFloat(priceElement.textContent.replace('$', ''));
-    totalElement.textContent = `$${(price * currentQuantity).toFixed(2)}`;
-}*/
-
-/////////////////////////////////////////////////////////////////////////
-
-/**** past code for loading a single product into the cart ******/
-
-/*
-let urlParams = new URLSearchParams(window.location.search);
-let productId = urlParams.get('id');
-console.log(productId);
-
-// Only run the request if a productId is actually in the URL
-if (productId) {
-    let xhr = new XMLHttpRequest();
-    
-    xhr.onload = function() {
-        if (this.status == 200) {
-            // FIX 1: Parse the single product object directly (no need to use .find!)
-            let product = JSON.parse(this.responseText); 
-            
-            let tbody = document.querySelector("tbody");
-            
-            // FIX 2: Use dynamic IDs instead of 'product1' so it scales better
-            let raws = `
-                <tr>
-                    <td>
-                        <div class="product-info">
-                            <img src="${product.photo1}" alt="Product Image">
-                            <span>${product.name}</span>
-                        </div>
-                    </td>
-                    <td id="product_${product.id}_price">$${Number(product.price).toFixed(2)}</td>
-                    <td>
-                        <button class="increase_quantity" onclick="updateQuantity('product_${product.id}_quantity', 1)">+</button>
-                        <span id="product_${product.id}_quantity">1</span>
-                        <button class="decrease_quantity" onclick="updateQuantity('product_${product.id}_quantity', -1)">-</button>
-                    </td>
-                    <td id="product_${product.id}_total">$${(Number(product.price) * 1).toFixed(2)}</td>
-                </tr>
-            `;
-            tbody.innerHTML += raws;
-        } else {
-            console.error("Error fetching product. Status:", this.status);
-        }
-    }
-
-    xhr.open("GET", "https://69ab3a51e051e9456fa39c75.mockapi.io/api/clothes/products/" + productId, true);
-    xhr.send();
-} else {
-    console.log("No product ID found in the URL. Cart is empty.");
-}*/
-
 ///////////////////////////////////////////////////////////////////////////////
 
 ////////////to update the quantity of a product in the cart/////////////
@@ -179,4 +113,72 @@ if (productId) {
     // If there is no ID in the URL (they just opened the cart page normally), just draw what's saved
     renderCart();
 }
+
+
+
+/****** past code for cart page, now replaced with a more dynamic version *******/
+
+/*function updateQuantity(quantityId, change) {
+    const quantityElement = document.getElementById(quantityId);
+    let currentQuantity = parseInt(quantityElement.textContent);
+    currentQuantity += change;
+    if (currentQuantity < 1) currentQuantity = 1;
+    quantityElement.textContent = currentQuantity;
+
+    // Update total price for the product
+    const priceElement = document.getElementById(quantityId.replace('quantity', 'price'));
+    const totalElement = document.getElementById(quantityId.replace('quantity', 'total'));
+    const price = parseFloat(priceElement.textContent.replace('$', ''));
+    totalElement.textContent = `$${(price * currentQuantity).toFixed(2)}`;
+}*/
+
+/////////////////////////////////////////////////////////////////////////
+
+/**** past code for loading a single product into the cart ******/
+
+/*
+let urlParams = new URLSearchParams(window.location.search);
+let productId = urlParams.get('id');
+console.log(productId);
+
+// Only run the request if a productId is actually in the URL
+if (productId) {
+    let xhr = new XMLHttpRequest();
+    
+    xhr.onload = function() {
+        if (this.status == 200) {
+            // FIX 1: Parse the single product object directly (no need to use .find!)
+            let product = JSON.parse(this.responseText); 
+            
+            let tbody = document.querySelector("tbody");
+            
+            // FIX 2: Use dynamic IDs instead of 'product1' so it scales better
+            let raws = `
+                <tr>
+                    <td>
+                        <div class="product-info">
+                            <img src="${product.photo1}" alt="Product Image">
+                            <span>${product.name}</span>
+                        </div>
+                    </td>
+                    <td id="product_${product.id}_price">$${Number(product.price).toFixed(2)}</td>
+                    <td>
+                        <button class="increase_quantity" onclick="updateQuantity('product_${product.id}_quantity', 1)">+</button>
+                        <span id="product_${product.id}_quantity">1</span>
+                        <button class="decrease_quantity" onclick="updateQuantity('product_${product.id}_quantity', -1)">-</button>
+                    </td>
+                    <td id="product_${product.id}_total">$${(Number(product.price) * 1).toFixed(2)}</td>
+                </tr>
+            `;
+            tbody.innerHTML += raws;
+        } else {
+            console.error("Error fetching product. Status:", this.status);
+        }
+    }
+
+    xhr.open("GET", "https://69ab3a51e051e9456fa39c75.mockapi.io/api/clothes/products/" + productId, true);
+    xhr.send();
+} else {
+    console.log("No product ID found in the URL. Cart is empty.");
+}*/
 

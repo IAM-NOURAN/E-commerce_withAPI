@@ -471,12 +471,30 @@ footer {
     right: 20px;
     display: flex;
     width: 50%;
-    height: 50%;
     margin: 15px ;
     /* background-color: blueviolet; */
     #bigscreen{
         /* background-color: #717FE0; */
-        min-width: 90%;
+        min-width: 80%;
+    }
+    .options{
+        display: flex;
+        gap: 10px;
+        position: relative;
+        top: 15px;
+        left: 20px;
+    }
+    .options div{
+        width: 68px;
+        height: 68px;
+        border-radius: 3px;
+        overflow: hidden;
+        /* background-color: aquamarine; */
+    }
+    .options img{
+        width: 70px;
+        height: 100px;
+        object-fit: cover;
     }
     button{
         background-color: hsla(0, 0%, 1%, 0.5);
