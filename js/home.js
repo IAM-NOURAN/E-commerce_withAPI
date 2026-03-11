@@ -121,7 +121,6 @@ let num = document.getElementById("numinput");
 inc.addEventListener('click', () => { num.stepUp(1); });
 dec.addEventListener('click', () => { num.stepDown(1); });
 
-// حدث الضغط على الأزرار (سواء لفتح النافذة أو جلب البيانات أو التقليب)
 document.addEventListener('click', function(e) {
     
     // 1. when clicking Quick Overview
@@ -130,7 +129,6 @@ document.addEventListener('click', function(e) {
         let productid = detailsBtn.getAttribute('data-id');
         if (!productid) return;
 
-        // إظهار نافذة التحميل 
         mywind.style.display = 'inline'; 
 
 //////////////////////////////////api call to get the details of the product and draw them in the overlay//////////////////////////////////////
@@ -151,7 +149,7 @@ document.addEventListener('click', function(e) {
                 
                 /////////////draw the photos in the overlay/////////////
                 detailsContainer.innerHTML = `
-                 <div>
+                <div>
                     <div class="options active" data-index="1">
                         <img src="${productDetails.photo1}" alt="">
                     </div>
@@ -170,7 +168,6 @@ document.addEventListener('click', function(e) {
                     <a id="zoom"><i class="fa fa-expand" aria-hidden="true"></i></a>
                 </div>`;
                 
-                // حفظ الصور في مصفوفة داخل عنصر الشاشة الكبيرة لتسهيل التقليب
                 let screenObj = document.getElementById('screen');
                 screenObj.photosArray = [productDetails.photo1, productDetails.photo2, productDetails.photo3];
 
@@ -183,7 +180,6 @@ document.addEventListener('click', function(e) {
         xhrDetails.send();
     }
 
-    // 2. التعامل مع تقليب الصور المصغرة (Thumbnails)
     let optionClick = e.target.closest('.options');
     if (optionClick) {
         let screen = document.getElementById("screen");
@@ -238,7 +234,7 @@ function updateActiveThumbnail(index) {
 
 
 
-///////////////////////////////////Noran previous code for the overlay (before adding the API)////////////////////////////////////
+///////////////////////////////////Nouran previous code for the overlay (before adding the API)////////////////////////////////////
 /*
 // Use event delegation for quick-btn
 let mywind = document.getElementById('overlay');
