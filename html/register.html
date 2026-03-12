@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="..\css\register.css">
+    
 </head>
 <body>
     <div class="container">
@@ -12,25 +13,25 @@
             <h2>Create Account</h2>
             <p class="subtitle">Please fill in your details to register</p>
             
-            <form id="form">
+            <form id="registerForm"  id="form">
                 <div class="input-group">
                     <label>Full Name</label>
-                    <input type="text" placeholder="Enter your full name" required>
+                    <input type="text" id="username" placeholder="Enter your full name" required>
                 </div>
                 
                 <div class="input-group">
                     <label>Email</label>
-                    <input type="email" placeholder="Enter your email" required>
+                    <input type="email" id="email" placeholder="Enter your email" required>
                 </div>
                 
                 <div class="input-group">
                     <label>Password</label>
-                    <input type="password" placeholder="Create a password" required>
+                    <input type="password" id="password" placeholder="Create a password" required>
                 </div>
                 
                 <div class="input-group">
                     <label>Confirm Password</label>
-                    <input type="password" placeholder="Confirm your password" required>
+                    <input type="password" id="confirm_password" placeholder="Confirm your password" required>
                 </div>
                 
                 <div class="terms">
@@ -46,7 +47,6 @@
             </div>
         </div>
     </div>
-
-<script src="..\js\storage.js"></script>
+    <script src="..\js\reg&log_validation.js"></script>
 </body>
 </html>
