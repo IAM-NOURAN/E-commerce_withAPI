@@ -44,4 +44,4 @@ setInterval(function(){
 
     showSlide(index);
 
-},4000);
+},4000); 
