@@ -100,7 +100,9 @@ function validateRegistration() {
     return true; // Everything passed!
 }
 
+
 /////////////////storage logic for users data////////////////////
+
 const storage_key = 'users'; 
 
 // فانكشن اجيب بيها بيانات المستخدمين الي عندي كلها 
@@ -129,4 +131,16 @@ function registerUser(userData) {
     saveUsers(users);
     localStorage.setItem('currentUser', JSON.stringify(userData)); // عشان يحفظ تسجيل الدخول
     return { success: true, message: 'register successed!' };
+}
+
+function loginUser(userData) {
+    const users = getUsers();
+    const user = users.find(u => u.email === userData.email);
+    if (!user) {
+        return { success: false, message: 'user not found' };
+    }
+    if (user.password !== userData.password) {
+        return { success: false, message: 'password is wrong ' };
+    }
+    return { success: true, user: { name: user.name, email: user.email } };
 }
