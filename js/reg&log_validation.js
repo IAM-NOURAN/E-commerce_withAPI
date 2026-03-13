@@ -127,5 +127,6 @@ function registerUser(userData) {
         password: userData.password
     });
     saveUsers(users);
+    localStorage.setItem('currentUser', JSON.stringify(userData)); // عشان يحفظ تسجيل الدخول
     return { success: true, message: 'register successed!' };
 }
