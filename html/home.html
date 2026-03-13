@@ -4,10 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <title>Home</title>
 </head>
 <body>
-    <!-- Top Bar -->
+    <!-- tob Bar -->
     <div class="topBar">
         <p>Free Shipping For Orders Above $100</p>
     </div>
@@ -63,7 +65,7 @@
             <h3>Women</h3>
             <p>Summer 2026</p>
             <span>Shop Now</span>
-         </div>
+        </div>
     </div>
       <div class="category">
     <img src="../images\banner-02.jpg" alt="">
@@ -82,10 +84,133 @@
     </div>
   </div>
 </section>
+
+<!-------------- Quick view overlay(details) ----------------->
+
+<div class="body" id="overlay">
+        <img src="../images/icons/icon-close.png" alt="" id="close">
+    <div class="overlay-div">
+        <div id="photos">
+            <!-- here we will add the product images from home api  -->
+      <!--
+            <div>
+                <div id="op1" class="options active">
+                        <img src="../images/product-detail-01.jpg" alt="">
+                    </div>
+
+                    <div id="op2" class="options">
+                        <img src="../images/product-detail-02.jpg" alt="">
+                    </div>
+
+                    <div id="op3" class="options">
+                        <img src="../images/product-detail-03.jpg" alt="">
+                    </div>
+            </div>
+
+                <div id="bigscreen">
+                    <img src="../images/product-detail-01.jpg" alt="" id="screen">
+                    <button id="next" ><i class="fa fa-chevron-right" aria-hidden="true" style="color: white;"></i></button>
+                    <button id="prev"  ><i class="fa fa-chevron-left" aria-hidden="true" style="color: white;"></i></button>
+                    <a id="zoom"><i class="fa fa-expand" aria-hidden="true"></i></a>
+                </div>
+
+
+            -->   
+        </div>
+
+        <div id="my-data">
+
+                <div id="titles">
+                    <h4>Lightweight Jacket</h4>
+                    <span>$58.79</span>
+                    <p>Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.</p>
+                </div>
+
+                
+                    <div id="details">
+
+                    <table>
+                        
+                        <tr>
+                            <td><label for="Size">Size</label></td>
+                            <td>
+                            <select name="Size" id="Size">
+                            <option value="default">Choose an option</option>
+                            <option value="s"> Size S</option>
+                            <option value="m"> Size M</option>
+                            <option value="l"> Size L</option>
+                            <option value="xl"> Size XL</option>
+                        </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="Color">Color</label></td>
+                            <td>
+                            <select name="Color" id="Color">
+                            <option value="default">Choose an option</option>
+                            <option value="w">white</option>
+                            <option value="bl">black</option>
+                            <option value="g">grey</option>
+                            <option value="br">brown</option>
+                        </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="quantity-btn">
+                                    <button id="btn-inc">+</button>
+                                    <input type="number" value="1" min="1" id="numinput">
+                                    <button id="btn-dec">-</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td id="addtocart">
+                       
+                            </td>
+                        </tr>
+
+                        <!-- <tr>
+                            <td></td>
+                            <td id="icons">
+							<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
+								<i class="fa fa-facebook"></i>
+							</a>
+
+							<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
+								<i class="fa fa-twitter"></i>
+							</a>
+
+							<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
+								<i class="fa fa-google-plus"></i>
+							</a>
+                            </td>
+                        </tr> -->
+                    </table>
+
+                        
+
+                </div>
+
+        </div>
+
+    </div>
+</div>
+<!----------------------- details end ---------------------->
+
+
 <section class="bestsellers">
     <h2>Best Sellers</h2>
-    <div class="products">
+    <div class="products" id="products_container">
+        <!-- products will be loaded here from API -->
+    </div>
 
+<!----------past static products --------->
+<!--  
         <div class="product">
             <div class="product-img">
                 <img src="../images\product-01.jpg" alt="">
@@ -119,44 +244,10 @@
                 <div class="cart-icon">
                     <img src="..\images\home\shopping-cart.png" alt="">
                 </div>
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="product-img">
-                <img src="../images\product-03.jpg" alt="">
-                <button class="quick-btn">Quick Overview</button>
-            </div>
-
-            <div class="product-info">
-                <div class="text">
-                <h4>Only Check Trouser</h4>
-                <p>$25.50</p>
-            </div>
-
-            <div class="cart-icon">
-             <img src="..\images\home\shopping-cart.png" alt="">
-            </div>
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="product-img">
-                <img src="../images\product-04.jpg" alt="">
-                <button class="quick-btn">Quick Overview</button>
-            </div>
-
-            <div class="product-info">
-                <div class="text">
-                    <h4>Basic White T-Shirt</h4>
-                    <p>$25.00</p>
-                </div>
-                <div class="cart-icon">
-                    <img src="..\images\home\shopping-cart.png" alt="">
-                </div>
-            </div>
-        </div>
+            </div> -->      
 </section>
+
+
 <footer>
   <div class="footer-container">
 

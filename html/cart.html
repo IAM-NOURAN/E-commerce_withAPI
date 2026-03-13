@@ -11,20 +11,31 @@
          <header>
             <div class="header-left">
                 <a href="#" class="logo">home</a>
-                <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> shopping cart</a>
+                <a href="../html/home.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> shopping cart</a>
             </div>
          </header>
 
     <div class="cart_container">
-        <div class="cart_table">
+        <div class="cart_table" id="cart_table">
              <table>
-                <tr>
-                    <th>Product</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Total</th>
-                </tr>
-                <tr>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+     <!-- Cart items will be dynamically added here using JavaScript -->
+      
+                </tbody>
+
+                <!-- static example of cart items, you can replace this with dynamic content from JavaScript -->
+     <!--
+                <tr >
+
                     <td>
                         <div class="product-info">
                             <img src="../images/item-cart-01.jpg" alt="Product Image">
@@ -54,13 +65,13 @@
                         </td>
                         <td id="product2_total">$20.00</td>
                     </tr>
-                       <tr>
-                        <td> <button class="coupon_btn">Coupon code</button></td>
-                       
+     -->
+                    <tr>
+                      <td> <button class="coupon_btn">Coupon code</button></td>   
                       <td><button class="apply_btn">apply coupon</button></td>  
                       <td><button class="update_btn">Update Cart</button></td>
 
-                     </tr>
+                     </tr> 
 
         </table>
         </div>
@@ -87,9 +98,7 @@
         </div>
         <span class="total_amount">Total: $30.00</span>
         <button class="checkout_btn">Proceed to Checkout</button>
-    </div>   
-       
-
+    </div>       
     </div>
    
    <script src="../js/cart.js"></script> 
