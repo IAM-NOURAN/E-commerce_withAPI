@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coza store</title>
+    <link rel="stylesheet" href="./style.css">
+<style>
+    
+.product-card{
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+
+.product-img{
+  position: relative;
+  overflow: hidden;
+}
+
+.product-img img{
+  width: 100%;
+  display: block;
+  transition: transform .5s ease;
+}
+
+.products-grid{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+
+.product-img img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.product-card:hover img{
+  transform: scale(1.08);
+}
+
+
+.quick-view{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 20px);
+
+  background: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+
+  opacity: 0;
+  transition: all .4s ease;
+}
+
+
+.product-card:hover .quick-view{
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+
+.quick-view:hover{
+  background: black;
+  color: white;
+}
+
+
+.product-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+
+.product-name{
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+
+.price{
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  margin-top: 4px;
+}
+
+/* heart icon */
+.heart-icon{
+  font-size: 18px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+
+.heart-icon:hover{
+  color: red;
+}
+
+
+.products-grid{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+
+
+
+
+
+@media (max-width: 992px){
+
+  .products-grid{
+    grid-template-columns: repeat(3,1fr);
+  }
+
+}
+
+@media (max-width: 768px){
+
+  .products-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+
+@media (max-width: 500px){
+
+  .products-grid{
+    grid-template-columns: 1fr;
+  }
+
+}
+
+.products-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+   
+     </style>
+</head>
+<body>
+    <header>
+        <div id="shopnav">
+            <nav>
+                <ul>
+                 <li><a href="#All Products">All Products</a></li>
+                 <li><a href="#Women">Women</a></li>
+                 <li><a href="#Men">Men</a></li>
+                 <li><a href="#Bag">Bag</a></li>
+                 <li><a href="#Shoes">Shoes</a></li>
+                 <li><a href="#Watches">Watches</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        
+
+      
+    </header>
+            
+     
+<div class="products-grid">
+    
+    <!-- card 1 start -->
+     <div class="product-card">
+  <div class="product-img">
+    <img src="./images/product-01.jpg" alt="">
+    <button class="quick-view">Quick View</button>
+  </div>
+
+  <div class="product-info">
+    <div class="product-text">
+      <p class="product-name">Esprit Ruffle Shirt</p>
+      <span class="price">$16.64</span>
+    </div>
+    <div class="heart-icon">♡</div>
+  </div>
+</div>
+    <!-- card 1 end -->
+
+     <!-- card 2 start -->
+      <div class="product-card">
+  <div class="product-img">
+    <img src="./images/product-02.jpg" alt="">
+    <button class="quick-view">Quick View</button>
+  </div>
+
+  <div class="product-info">
+    <div class="product-text">
+      <p class="product-name">Esprit Ruffle Shirt</p>
+      <span class="price">$16.64</span>
+    </div>
+    <div class="heart-icon">♡</div>
+  </div>
+</div>
+     <!-- card 2 end -->
+
+    <!-- card 3 start -->
+    <div class="product-card">
+  <div class="product-img">
+    <img src="./images/product-03.jpg" alt="">
+    <button class="quick-view">Quick View</button>
+  </div>
+
+  <div class="product-info">
+    <div class="product-text">
+      <p class="product-name">Esprit Ruffle Shirt</p>
+      <span class="price">$16.64</span>
+    </div>
+    <div class="heart-icon">♡</div>
+  </div>
+</div>
+    <!-- card 3 end -->
+
+    <!-- card 4 start -->
+<div class="product-card">
+  <div class="product-img">
+    <img src="./images/product-04.jpg" alt="">
+    <button class="quick-view">Quick View</button>
+  </div>
+
+  <div class="product-info">
+    <div class="product-text">
+      <p class="product-name">Esprit Ruffle Shirt</p>
+      <span class="price">$16.64</span>
+    </div>
+    <div class="heart-icon">♡</div>
+  </div>
+</div>
+    <!-- card 4 end -->
+
+    <!-- card 5 start -->
+   <div class="product-card">
+  <div class="product-img">
+    <img src="./images/product-05.jpg" alt="">
+    <button class="quick-view">Quick View</button>
+  </div>
+
+  <div class="product-info">
+    <div class="product-text">
+      <p class="product-name">Esprit Ruffle Shirt</p>
+      <span class="price">$16.64</span>
+    </div>
+    <div class="heart-icon">♡</div>
+  </div>
+</div>
+    <!-- card 5 end -->
+
+    <!-- card 6 start -->
+    <div class="product-card">
+  <div class="product-img">
+    <img src="./images/product-06.jpg" alt="">
+    <button class="quick-view">Quick View</button>
+  </div>
+
+  <div class="product-info">
+    <div class="product-text">
+      <p class="product-name">Esprit Ruffle Shirt</p>
+      <span class="price">$16.64</span>
+    </div>
+    <div class="heart-icon">♡</div>
+  </div>
+</div>
+    <!-- card 6 end -->
+
+    <!-- card 7 start -->
+     <div class="product-card">
+  <div class="product-img">
+    <img src="./images/product-07.jpg" alt="">
+    <button class="quick-view">Quick View</button>
+  </div>
+
+  <div class="product-info">
+    <div class="product-text">
+      <p class="product-name">Esprit Ruffle Shirt</p>
+      <span class="price">$16.64</span>
+    </div>
+    <div class="heart-icon">♡</div>
+  </div>
+</div>
+     <!-- card 7 end -->
+
+     <!-- card 8 start -->
+      <div class="product-card">
+  <div class="product-img">
+    <img src="./images/product-08.jpg" alt="">
+    <button class="quick-view">Quick View</button>
+  </div>
+
+  <div class="product-info">
+    <div class="product-text">
+      <p class="product-name">Esprit Ruffle Shirt</p>
+      <span class="price">$16.64</span>
+    </div>
+    <div class="heart-icon">♡</div>
+  </div>
+</div>
+     <!-- card 8 end -->
+
+
+     <div class="product-card">
+  <div class="product-img">
+    <img src="./images/product-09.jpg" alt="">
+    <button class="quick-view">Quick View</button>
+  </div>
+
+  <div class="product-info">
+    <div class="product-text">
+      <p class="product-name">Esprit Ruffle Shirt</p>
+      <span class="price">$16.64</span>
+    </div>
+    <div class="heart-icon">♡</div>
+  </div>
+</div>
+
+<div class="product-card">
+  <div class="product-img">
+    <img src="./images/product-10.jpg" alt="">
+    <button class="quick-view">Quick View</button>
+  </div>
+
+  <div class="product-info">
+    <div class="product-text">
+      <p class="product-name">Esprit Ruffle Shirt</p>
+      <span class="price">$16.64</span>
+    </div>
+    <div class="heart-icon">♡</div>
+  </div>
+</div>
+
+<div class="product-card">
+  <div class="product-img">
+    <img src="./images/product-11.jpg" alt="">
+    <button class="quick-view">Quick View</button>
+  </div>
+
+  <div class="product-info">
+    <div class="product-text">
+      <p class="product-name">Esprit Ruffle Shirt</p>
+      <span class="price">$16.64</span>
+    </div>
+    <div class="heart-icon">♡</div>
+  </div>
+</div>
+
+<div class="product-card">
+  <div class="product-img">
+    <img src="./images/product-12.jpg" alt="">
+    <button class="quick-view">Quick View</button>
+  </div>
+
+  <div class="product-info">
+    <div class="product-text">
+      <p class="product-name">Esprit Ruffle Shirt</p>
+      <span class="price">$16.64</span>
+    </div>
+    <div class="heart-icon">♡</div>
+  </div>
+</div>
+
+<div class="product-card">
+  <div class="product-img">
+    <img src="./images/product-13.jpg" alt="">
+    <button class="quick-view">Quick View</button>
+  </div>
+
+  <div class="product-info">
+    <div class="product-text">
+      <p class="product-name">Esprit Ruffle Shirt</p>
+      <span class="price">$16.64</span>
+    </div>
+    <div class="heart-icon">♡</div>
+  </div>
+</div>
+
+<div class="product-card">
+  <div class="product-img">
+    <img src="./images/product-14.jpg" alt="">
+    <button class="quick-view">Quick View</button>
+  </div>
+
+  <div class="product-info">
+    <div class="product-text">
+      <p class="product-name">Esprit Ruffle Shirt</p>
+      <span class="price">$16.64</span>
+    </div>
+    <div class="heart-icon">♡</div>
+  </div>
+</div>
+
+<div class="product-card">
+  <div class="product-img">
+    <img src="./images/product-15.jpg" alt="">
+    <button class="quick-view">Quick View</button>
+  </div>
+
+  <div class="product-info">
+    <div class="product-text">
+      <p class="product-name">Esprit Ruffle Shirt</p>
+      <span class="price">$16.64</span>
+    </div>
+    <div class="heart-icon">♡</div>
+  </div>
+</div>
+
+<div class="product-card">
+  <div class="product-img">
+    <img src="./images/product-16.jpg" alt="">
+    <button class="quick-view">Quick View</button>
+  </div>
+
+  <div class="product-info">
+    <div class="product-text">
+      <p class="product-name">Esprit Ruffle Shirt</p>
+      <span class="price">$16.64</span>
+    </div>
+    <div class="heart-icon">♡</div>
+  </div>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+         
