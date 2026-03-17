@@ -54,37 +54,40 @@ function validateConfirmPassword() {
     return true;
 }
 
-document.getElementById("registerForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // prevent form from submitting and refreshing the page
+const registerForm = document.getElementById("registerForm");
+if (registerForm) {
+    registerForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // prevent form from submitting and refreshing the page
 
-    // 1.check if all validations passed
-    if (validateRegistration()) {
-        
-        // 2. collect current user data from the form
-        var currentName = document.getElementById("username").value;
-        var currentEmail = document.getElementById("email").value;
-        var currentPassword = document.getElementById("password").value;
+        // 1.check if all validations passed
+        if (validateRegistration()) {
+            
+            // 2. collect current user data from the form
+            var currentName = document.getElementById("username").value;
+            var currentEmail = document.getElementById("email").value;
+            var currentPassword = document.getElementById("password").value;
 
-        // 3. prepare user data for storage
-        var userData = {
-            name: currentName,
-            email: currentEmail,
-            password: currentPassword
-        };
+            // 3. prepare user data for storage
+            var userData = {
+                name: currentName,
+                email: currentEmail,
+                password: currentPassword
+            };
 
-        // 4. attempt to register the user and get the result
-        var registrationResult = registerUser(userData);
+            // 4. attempt to register the user and get the result
+            var registrationResult = registerUser(userData);
 
-        // 5. check the registration result
-        if (registrationResult.success) {
-            alert(registrationResult.message); // when registration is successful, show success message
-               window.location.href = "../html/home.html"; // redirect to home page after successful registration
-        } else {
-            // when registration fails (e.g., email already exists), show the error message
-            alert(registrationResult.message); 
+            // 5. check the registration result
+            if (registrationResult.success) {
+                alert(registrationResult.message); // when registration is successful, show success message
+                   window.location.href = "../html/home.html"; // redirect to home page after successful registration
+            } else {
+                // when registration fails (e.g., email already exists), show the error message
+                alert(registrationResult.message); 
+            }
         }
-    }
-});
+    });
+}
 
 function validateRegistration() {
     validateEmail();
@@ -100,6 +103,32 @@ function validateRegistration() {
     return true; // Everything passed!
 }
 
+////////login///////////////
+
+let form = document.getElementById("loginForm");
+let emailInput = document.getElementById("loginemail");
+let passwordInput = document.getElementById("loginpassword");
+
+if (form) {
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        var loginData = {
+            email: emailInput.value.trim(),
+            password: passwordInput.value.trim()
+        };
+
+        let loginSuccess = loginUser(loginData);
+
+        if(loginSuccess.success){
+            alert("Login Successful!");
+            window.location.href = "../html/home.html";
+        } else {
+            alert(loginSuccess.message);
+        }
+
+    });
+}
 
 /////////////////storage logic for users data////////////////////
 
