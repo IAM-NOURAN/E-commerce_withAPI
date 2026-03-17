@@ -46,7 +46,35 @@ setInterval(function(){
 
     showSlide(index);
 
-},4000);
+},4000); 
+
+
+//////////////////// check login //////////////////////////////
+
+function isLoggedIn(){
+    let user = localStorage.getItem("loggedInUser");
+    return user ? true : false;
+}
+
+document.addEventListener("click", function(e){
+
+    let shopBtn = e.target.closest(".shop-link");
+    let cartBtn = e.target.closest(".cart a, .cart-icon img")
+    let shopNowBtn = e.target.closest(".shop-now-btn");
+    let quickBtn = e.target.closest('.quick-btn, .quick-btn *');
+
+    if(!isLoggedIn() && (shopBtn || cartBtn || shopNowBtn || quickBtn)){
+        e.preventDefault();
+        window.location.href = "../html/login.html"; 
+ 
+    return;
+}
+
+
+});
+
+
+
 
 /////////////////////// fake products API///////////////////////
 

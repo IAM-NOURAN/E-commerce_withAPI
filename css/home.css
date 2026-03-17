@@ -199,12 +199,12 @@ p{
   margin-bottom: 15px;
 }
 .overlay span {
-  margin-top: auto;   /* دي اللي بتنزلها تحت */
+  margin-top: auto;   
   text-decoration: underline;
   font-weight: bold;
 
-  opacity: 0;         /* مخفية في الأول */
-  transform: translateY(20px); /* نازلة تحت شوية */
+  opacity: 0;         
+  transform: translateY(20px); 
   transition: all 0.4s ease;
 }
 .category:hover .overlay {
@@ -215,7 +215,7 @@ p{
   transform: translateY(0);
 }
 .bestsellers {
-  padding: 120px 80px;   /* مسافة محترمة فوق وتحت */
+  padding: 120px 80px;   
   background: #fff;
 }
 .bestsellers h2 {
