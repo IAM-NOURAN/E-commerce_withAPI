@@ -29,7 +29,7 @@ function validateEmail() {
 
 function validatePassword() {
     var password = document.getElementById("password").value;
-    const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()-+])[A-Za-z\d!@#$%^&*()-+]{8,}$/;
+    const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$_%^&*()-+])[A-Za-z\d!@#$%^&_*()-+]{8,}$/;
     if (!password) {
         alert("Please enter a password.");
         return false;
